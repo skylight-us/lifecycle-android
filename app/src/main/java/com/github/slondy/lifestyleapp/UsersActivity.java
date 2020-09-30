@@ -232,6 +232,7 @@ public class UsersActivity extends AppCompatActivity implements View.OnClickList
         SharedPreferences mPref = PreferenceManager.getDefaultSharedPreferences(this);
         String savedData = mPref.getString("timetable_demo","");
         if(savedData == null && savedData.equals("")) return;
+        System.out.println("test");
         timetable.load(savedData);
         Toast.makeText(this,"loaded!",Toast.LENGTH_SHORT).show();
     }
